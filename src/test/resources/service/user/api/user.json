@@ -1,0 +1,40 @@
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "userid": "{{userid}}",
+  "name": "{{name}}",
+  "department": [
+    1
+  ],
+  "position": "高级测试开发",
+  "mobile": "{{mobile}}",
+  "gender": "1",
+  "email": "{{mobile}}@163.com",
+  "avatar": "",
+  "status": 4,
+  "isleader": 0,
+  "extattr": {
+    "attrs": [
+
+    ]
+  },
+  "telephone": "",
+  "enable": 1,
+  "hide_mobile": 0,
+  "order": [
+    0
+  ],
+  "external_profile": {
+    "external_attr": [
+
+    ],
+    "external_corp_name": ""
+  },
+  "qr_code": "https://open.work.weixin.qq.com/wwopen/userQRCode?vcode=vc2be40c85183af3d0",
+  "alias": "汪鹏",
+  "is_leader_in_dept": [
+    0
+  ],
+  "address": "西斗门路3号天堂软件园",
+  "thumb_avatar": ""
+}

@@ -1,0 +1,19 @@
+methods:
+  list:
+    query:
+      id: ${departmentId}
+    method: get
+    url: https://qyapi.weixin.qq.com/cgi-bin/department/list
+
+  delete:
+    query:
+      id: ${departmentId}
+    method: get
+    url: https://qyapi.weixin.qq.com/cgi-bin/department/delete
+
+  create:
+    postBodyMap:
+      name: ${departmentName}
+      parentid: ${parentDepartmentId}
+    method: post
+    url: https://qyapi.weixin.qq.com/cgi-bin/department/create

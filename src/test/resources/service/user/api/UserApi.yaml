@@ -1,0 +1,19 @@
+methods:
+  get:
+    query:
+      userid: ${userId}
+    method: get
+    url: https://qyapi.weixin.qq.com/cgi-bin/user/get
+
+  delete:
+    query:
+      userid: ${userId}
+    method: get
+    url: https://qyapi.weixin.qq.com/cgi-bin/user/delete
+
+  create:
+    header:
+      Content-Type: "application/json; charset=UTF-8"
+    postBodyString: ${postBody}
+    method: post
+    url: https://qyapi.weixin.qq.com/cgi-bin/user/create
