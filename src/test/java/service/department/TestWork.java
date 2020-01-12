@@ -1,10 +1,14 @@
 package service.department;
 
+import io.restassured.builder.ResponseBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Disabled;
 import io.restassured.http.ContentType;
-import static io.restassured.RestAssured.given;
+
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
 import java.util.HashMap;
@@ -51,7 +55,15 @@ public class TestWork {
 
     @Test
     public void getDepartList() {
-        given()
+        given().filter((req, res, ctx) ->{
+            req.removeQueryParam("id");
+            req.queryParam("id", 2);
+            Response oriRes  = ctx.next(req, res);
+            System.out.println(oriRes.prettyPeek());
+            ResponseBuilder newRes = new ResponseBuilder().clone(oriRes);
+            newRes.setBody("{\"code\":0}");
+            return newRes.build();
+            })
                 .queryParam("access_token", access_token)
                 .queryParam("id", departmentId)
         .when().log().all()

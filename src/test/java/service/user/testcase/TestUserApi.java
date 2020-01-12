@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
@@ -53,7 +54,7 @@ public class TestUserApi {
         String userId = "pwtest_" + System.currentTimeMillis();
         String mobile = String.valueOf(System.currentTimeMillis()).substring(0,11);
         userApi.create(name, mobile, userId).then().body("errcode", equalTo(0));
-        userApi.get(userId).then().body("name", equalTo(name));
+        userApi.get(userId).then().body(matchesJsonSchemaInClasspath("service/user/testcase/user_schame.json"));
     }
 
     static Stream<Arguments> deleteByParmasFromYaml() {

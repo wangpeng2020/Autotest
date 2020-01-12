@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 public class BaseApi {
-    //todo: 使用注解优化参数传递，减少重复代码
+
     public ApiObjectModel model = new ApiObjectModel();
     HashMap<String, Object> params = new HashMap<>();
     public Response parseSteps() {

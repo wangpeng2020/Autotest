@@ -4,11 +4,6 @@ import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
 
-//todo: support signature
-//todo: support multi envs
-//todo: support multi accounts
-//todo: 对应设置外部环境变量
-
 public class Work {
     private static final String corId = "wwa664a53b85c09ea0";
     private static final String corpSecret = "iEOYzbJ48K-7XgCTuj9WdFT6RSOjEgsi2UMiBgZUFmU";

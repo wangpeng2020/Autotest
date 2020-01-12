@@ -11,8 +11,7 @@ import java.util.Map;
 import service.Work;
 
 public class ApiObjectMethodModel {
-    //todo 支持环境变量
-    //todo 支持组变量
+
     private HashMap<String, Object> params;
     public HashMap<String, Object> query;
     public HashMap<String, Object> header;

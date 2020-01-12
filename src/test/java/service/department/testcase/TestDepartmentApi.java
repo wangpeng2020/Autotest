@@ -11,9 +11,6 @@ import java.util.HashMap;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasSize;
-//todo 对应设置用例变量
-//todo 参数化, 使用模板
-//todo 断言数据优化
 
 public class TestDepartmentApi {
     static DepartmentApi departmentApi = new DepartmentApi();
